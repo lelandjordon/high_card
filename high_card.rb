@@ -10,12 +10,18 @@ puts ranks
 puts suits
 puts "all card types noted"
 
-  suits.each do |suit|
-    ranks.each do |rank|
-      full_deck << [rank, suit]
-    end
+suits.each do |suit|
+  ranks.each do |rank|
+    full_deck << [rank, suit]
   end
+end
 puts full_deck.inspect
 
 shuffled_deck = full_deck.shuffle
 puts shuffled_deck.inspect
+
+while input != "play"
+  puts "input player name"
+  gets.chomp player[i]
+  i += 1
+end

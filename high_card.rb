@@ -5,6 +5,9 @@ suits = [ "hearts", "spades", "clubs", "diamonds" ]
 players = []
 full_suits = []
 full_deck = []
+input = ""
+player = ""
+players = []
 
 puts ranks
 puts suits
@@ -20,8 +23,9 @@ puts full_deck.inspect
 shuffled_deck = full_deck.shuffle
 puts shuffled_deck.inspect
 
-while input != "play"
+while player != "play"
   puts "input player name"
-  gets.chomp player[i]
-  i += 1
+  player = gets.chomp.to_s
+  players << player
+  puts players
 end

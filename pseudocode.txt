@@ -13,7 +13,7 @@ def build_suits
 
   while input != "play"
   puts "input player name"
-  gets player[i]
+  gets.chomp player[i]
   i += 1
   end
   

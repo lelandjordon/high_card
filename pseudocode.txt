@@ -9,6 +9,7 @@ def build_suits
   full_suits[n] << ranks[n]
   end
 
+_______
   getting players:
 
   while input != "play"
@@ -16,4 +17,7 @@ def build_suits
   gets.chomp player[i]
   i += 1
   end
-  
+  ^^^^ close, but not quite.
+______
+
+Find highest card?

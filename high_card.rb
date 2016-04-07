@@ -8,16 +8,22 @@ full_deck = []
 input = ""
 player = ""
 players = []
+#
+# puts ranks + "all ranks"
+# puts suits + "all suits"
+# puts "all card types noted"
 
-puts ranks
-puts suits
-puts "all card types noted"
+ace = ranks.shift[0]
+ordered_ranks = ranks.push(ace)
+puts ordered_ranks
 
-suits.each do |suit|
-  ranks.each do |rank|
-    full_deck << [rank, suit]
-  end
-end
+# suits.each do |suit|
+#   ranks.each do |rank|
+#     full_deck << [rank, suit]
+#   end
+# end
+
+full_deck = ranks.product(suits)
 puts full_deck.inspect
 
 shuffled_deck = full_deck.shuffle

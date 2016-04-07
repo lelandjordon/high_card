@@ -17,27 +17,27 @@ ace = ranks.shift[0]
 ordered_ranks = ranks.push(ace)
 puts ordered_ranks
 
-# suits.each do |suit|
-#   ranks.each do |rank|
-#     full_deck << [rank, suit]
-#   end
-# end
-
-full_deck = ordered_ranks.product(suits)
+ordered_ranks.each do |rank|
+  suits.each do |suit|
+    full_deck << [rank, suit]
+  end
+end
+#
+# full_deck = ordered_ranks.product(suits)
 puts full_deck.inspect
 
 shuffled_deck = full_deck.shuffle
 puts shuffled_deck.inspect
-
-while player != "play"
-  puts "input player name"
-  player = gets.chomp.to_s
-  if player == "play"
-    break
-  end
-  players << player
-end
-puts players
+#
+# while player != "play"
+#   puts "input player name"
+#   player = gets.chomp.to_s
+#   if player == "play"
+#     break
+#   end
+#   players << player
+# end
+# puts players
 
 random_card = full_deck.sort_by { rand }
 puts random_card.inspect

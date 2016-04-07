@@ -38,3 +38,6 @@ while player != "play"
   players << player
 end
 puts players
+
+random_card = full_deck.sort_by { rand }
+puts random_card.inspect

@@ -23,7 +23,7 @@ puts ordered_ranks
 #   end
 # end
 
-full_deck = ranks.product(suits)
+full_deck = ordered_ranks.product(suits)
 puts full_deck.inspect
 
 shuffled_deck = full_deck.shuffle
@@ -32,6 +32,9 @@ puts shuffled_deck.inspect
 while player != "play"
   puts "input player name"
   player = gets.chomp.to_s
+  if player == "play"
+    break
+  end
   players << player
-  puts players
 end
+puts players
